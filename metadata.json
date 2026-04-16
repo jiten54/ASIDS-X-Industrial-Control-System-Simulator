@@ -1,0 +1,6 @@
+{
+  "name": "ASIDS-X: Ancient Core Edition",
+  "description": "Advanced Smart Industrial Device Simulator with an Ancient-Themed Control Interface. Features real-time sensor simulation, fault injection, and a unique 'Ancient Engineering Console' UI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

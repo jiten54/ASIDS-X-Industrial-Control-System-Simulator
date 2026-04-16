@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Almendra:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-ancient: "MedievalSharp", cursive;
+  --font-serif: "Georgia", serif;
+  --font-mono: "Courier New", monospace;
+  
+  --color-stone-900: #0d0d0c;
+  --color-stone-800: #1e1e1a;
+  --color-bronze: #5c4033;
+  --color-gold: #d4af37;
+  --color-fire: #ff4e00;
+  --color-parchment: #fdf5e6;
+  --color-ink: #2a2218;
+}
+
+@layer base {
+  body {
+    @apply bg-stone-900 text-gold font-serif overflow-hidden;
+    background: radial-gradient(circle at center, #1e1e1a 0%, #0d0d0c 100%);
+  }
+}
+
+@layer components {
+  .console-frame {
+    @apply relative w-full h-screen border-[12px] border-ink box-border grid grid-rows-[80px_1fr_200px] gap-2.5 p-5;
+  }
+
+  .stone-panel {
+    @apply bg-stone-800/80 border border-[#3d2b1f] p-4 rounded shadow-[inset_0_0_20px_rgba(0,0,0,0.5)];
+  }
+  
+  .bronze-border {
+    @apply border-bronze;
+  }
+  
+  .glow-rune {
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+  }
+  
+  .parchment {
+    @apply bg-parchment text-ink shadow-[5px_5px_15px_rgba(0,0,0,0.4)] rounded-sm relative;
+  }
+
+  .stone-btn {
+    @apply bg-[#3d2b1f] border-2 border-bronze text-gold px-6 py-2.5 uppercase text-xs cursor-pointer tracking-widest transition-colors hover:bg-bronze hover:text-white;
+  }
+}
